@@ -1,0 +1,62 @@
+.Login{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 5%;
+    gap: 10%;
+}
+.SignIn{
+    font-family: "Poppins",sans-serif;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    width: 150%;
+    height: 50%;
+
+}
+.Title_sign_in{
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    font-family: "Poppins",sans-serif;
+}
+.details{
+    font-size: 15px;
+    color: black;
+    font-family: "Poppins",sans-serif;
+}
+.input{
+    height: 50px;
+    background-color: transparent;
+    border-color: white;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: "Poppins",sans-serif;
+}
+.Loginbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    background-color: red;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 30%;
+    font-family: "Poppins",sans-serif;
+}
+.createAccount{
+    color:rgb(249, 91, 91);
+    font-family: "Poppins",sans-serif;
+    font-size: 16px;
+}
+.createAccount:hover{
+    color: rgb(255, 0, 0);
+    font-size: 17px;
+    text-decoration: underline rgb(192, 0, 0);
+}

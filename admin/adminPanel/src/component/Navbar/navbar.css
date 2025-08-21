@@ -1,0 +1,39 @@
+.Admin {
+    display: flex;
+    height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.Navbar {
+    width: 200px;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar_items {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar_items:hover,
+.sidebar_items.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}

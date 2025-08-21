@@ -1,0 +1,144 @@
+.item{
+    position: relative;
+    text-align: center;
+    border-radius: 5px;
+    background-color:transparent;
+    width: 250px;
+    
+
+}
+.card_img{
+    position: relative;
+
+}
+.item img{
+    width: 100px;
+    height: 110px;
+    margin-top: 20%;
+    transition: opacity 0.3s ease;
+}
+.card_img{
+    background-color:rgb(233, 233, 233);
+    height: 200px;
+}
+.item_hover { 
+    position: absolute;
+    top: 169px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-color: rgba(171, 171, 171, 0.5);
+    flex-direction: column;
+  }
+
+  .item:hover .item_hover { 
+    opacity: 1;
+  }
+  .add {
+    width: 250px;
+    height: 30px;
+    color: white;
+    background-color: black;
+    transition: background-color 0.3s ease;
+    font-family: "Poppins",sans-serif;
+  }
+  
+  .add:hover {
+    background-color: #ffffff;
+    color: black;
+    font-family: "Poppins",sans-serif;
+  }
+.icons_hover{
+    position: absolute;
+    top: 0;
+    left: 195px;
+    right: 0;
+    bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+  
+   
+}
+
+.bi_heart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    color:black;
+    
+}
+.bi_eye{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    color:black;
+    
+}
+.discount_hover{
+    position: absolute;
+    top: 0px;
+    left: 0;
+    right: 135;
+    bottom: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    font-size: 12px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
+}
+.item .title{
+    margin: 6px;
+    margin-left: 5%;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+}
+.item .item_prices .old_price{
+    display: flex;
+    gap: 5px;
+    color: grey ;
+    font-size: 15px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    text-decoration: line-through;
+}
+.item .item_prices .new_price{
+    display: flex;
+    gap: 10px;
+    color: red;
+    font-size: 16px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+}
+.item .rating{
+    display: flex;
+    color: rgb(162, 22, 22);
+    font-size: 15px;
+    font-family: "Poppins",sans-serif;
+    text-decoration: solid;
+    text-align: left;
+    justify-content: left;
+}

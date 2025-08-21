@@ -1,0 +1,119 @@
+.orders-container{
+    max-width: 100%;
+    margin: auto;
+    padding: 20px;
+}
+.orders-container .NOOrders{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    color: rgb(255, 65, 65);
+    font-size: 40px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
+}
+.order-card {
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+    background: #ffffff;
+    box-shadow: 3px 3px 3px 3px #e3e3e3;
+    transition: all 0.3s box-shadow ease-in-out ;
+}
+.order-card:hover{
+    border: none;
+    box-shadow: 4px 4px 4px 4px #d6d6d6;  
+}
+.order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.item-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius:4px;
+}
+.info_order_product{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.info_order_product .itemName{
+    font-size: 16px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+.info_order_product .ItemAmount{
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #DB4444;
+}
+.payment{
+    display: flex;
+    flex-direction: column;
+}
+.payment .paymentOptions{
+    font-size: 16px;
+    color: #000;
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;    
+}
+.payment .paymentOptions span{
+    color: #DB4444;
+    font-weight: 600;
+    text-decoration: underline;
+}
+.payment .PaymentStatus{
+    font-size: 15px;
+    color: #000;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+.payment .PaymentStatus span{
+    font-size: 16px;
+    color: #DB4444;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+}
+.cancel{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.statusOrder{
+    width: 140px;
+    height: 40px;
+    border-radius: 4px;
+    border:none;
+    font-size: 17px;
+    font-family: "Poppins",sans-serif;
+    background:#fdafaf;
+    color: #ffffff;
+    cursor: pointer;
+}
+.cancel_btn {
+    width: 140px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+    background:#DB4444;
+    color: #ffffff;
+    cursor: pointer;
+}

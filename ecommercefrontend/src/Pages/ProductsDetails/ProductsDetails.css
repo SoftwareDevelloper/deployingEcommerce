@@ -1,0 +1,169 @@
+.ProductsDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    margin-top: 5%;
+    gap: 5px;
+}
+.imgs{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+    padding: 20px 50px;
+}
+.imgs img{
+    width: 100px;
+    height: 100px;
+    gap: 5px;
+    margin-top: 10px;
+}
+.imgs img:hover {
+    cursor: zoom-in;
+}
+.thumbnail {
+    width: 300px;
+    background-color: transparent;
+}
+
+.thumbnail img {
+    height: auto;
+    width: 340px;
+    background-color: transparent;
+}
+.rightDiv{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+}
+.rightDiv .title{
+    font-size: 25px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+    color: #000;
+}
+.availability .in{
+    font-size: 16px;
+    color: rgb(94, 255, 0);
+    font-weight: 500;
+    font-family: "Poppins",sans-serif;
+}
+.availability .out {
+    font-size: 15px;
+    color: rgb(169, 0, 0);
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+}
+.newPrice{
+    font-size: 30px;
+    color: #000000;
+    font-weight: 500;
+}
+.solde{
+    font-size: 15px;
+    color: red;
+    font-family: 500;
+}
+.oldPrice{
+    font-size: 28px;
+    color: gray;
+    font-family: "Poppins",sans-serif;
+}
+.oldPrices{
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    font-family: "Poppins", sans-serif;
+}
+.prices{
+    display: flex;
+    gap: 8px;
+}
+.description{
+    font-size: 15px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 500;
+    color: #000;
+    width: 90%;
+    margin-top: 2%;
+}
+.colors{
+    display: flex;
+    justify-content:left;
+    align-items: center;
+}
+.colors span{
+    font-size: 17px;
+    font-weight: 500;
+    font-family: "Poppins",sans-serif;
+    color: #000;
+}
+.size{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 3px;
+    margin-top: 5px;
+}
+.size span{
+    font-size: 17px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    color: #000;
+}
+.sizeItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height:30px;
+    border: 1px solid #000;
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    font-weight: 500;
+    font-family: "Poppins", sans-serif;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.sizeItem:hover {
+    border: none;
+    background-color:rgb(254, 51, 51);
+    color: rgb(255, 255, 255);
+}
+
+.actions{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 5px;
+    padding-right: 10%;
+    padding-top: 5%;
+}
+.buyNow{
+    width: 160px;
+    height: 45px;
+    background-color: rgb(255, 65, 65);
+    color: white;
+    font-family: "Poppins",sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+}
+.wishlists{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border: 1px solid rgb(115, 115, 115);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.wishlists svg{
+    margin-top: 3px;
+}

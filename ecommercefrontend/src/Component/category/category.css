@@ -1,0 +1,15 @@
+.category{
+    margin-left: 14%;
+    margin-top: 8%;
+}
+.Category_item {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: transparent;
+    gap: 5%;
+    
+}
+.ligne{
+    width: 900px;
+    margin-right: 50%;
+}
