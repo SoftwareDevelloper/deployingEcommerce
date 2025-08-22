@@ -20,7 +20,14 @@ const Stripe = require("stripe");
 const stripe = Stripe(process.env.STRIPE_SECRET_KEY);
 
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://exlusivestyles-2709.onrender.com", // your deployed frontend
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true, // if you send cookies or auth headers
+  })
+);
+
 app.use(
   session({
     secret: "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",
