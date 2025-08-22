@@ -10,6 +10,7 @@ import Tv from '../../asssets/Tv.png';
 import Women from '../../asssets/womenBanner.png';
 
 const Products = () => {
+  const API_URL = process.env.REACT_APP_API_URL;
     const {category} = useParams();
     const categoryBanner = {
       "Women's":Women,
@@ -41,7 +42,7 @@ const Products = () => {
             setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 })); 
             const token = localStorage.getItem('auth-token');
             if (token) {
-                fetch('http://localhost:4000/Addtocart', {
+                fetch(`${API_URL}/Addtocart`, {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -61,7 +62,7 @@ const Products = () => {
             }
         };
     useEffect(()=>{
-        fetch(`http://localhost:4000/Category/${category}`)
+        fetch(`${API_URL}/Category/${category}`)
         .then((response) => response.json())
         .then((data) => setProducts(data))
         .catch((error) => console.error('failed to fetched product by  category:',error))

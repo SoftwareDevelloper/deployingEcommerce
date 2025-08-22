@@ -7,10 +7,10 @@ import './Products.css'
 const Products = () => {
     const [allproducts,setAllproducts] = useState([])
     const [cartItems, setCartItems] = useState([]);
-
+    const API_URL = process.env.REACT_APP_API_URL;
       const fetchNewCollection = async () => {
           try {
-              const res =await fetch('http://localhost:4000/NewCollections');
+              const res =await fetch(`${API_URL}/NewCollections`);
               const data = await res.json();
               setAllproducts(data);
           } catch (error) {
@@ -26,7 +26,7 @@ const Products = () => {
         setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 })); 
             const token = localStorage.getItem('auth-token');
             if (token) {
-            fetch('http://localhost:4000/Addtocart', {
+            fetch(`${API_URL}/Addtocart`, {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',

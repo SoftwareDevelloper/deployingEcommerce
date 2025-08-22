@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom'
 import aside_sign_img from '../../asssets/aside_sign_img.png'
 import '../CSS/Login.css'
 const Login = () => {
+  const API_URL = process.env.REACT_APP_API_URL;
   const [formData , setformData] = useState({
-  
     password:"",
     email:""
   });
@@ -18,7 +18,7 @@ const Login = () => {
     }
     console.log('sign up function executed',formData)
     let responseData;
-    await fetch('http://localhost:4000/Login',{
+    await fetch(`${API_URL}/Login`,{
       method:"POST",
       headers:{
         Accept: 'application/json',

@@ -3,12 +3,13 @@ import { useParams } from 'react-router-dom';
 import '../CSS/Orders.css'
 
   const CancelOrder = () => {
+    const API_URL = process.env.REACT_APP_API_URL;
     const { id } = useParams();
     const [Orders, setOrders] = useState([]);
     useEffect(() => {
       const fetchCancelledOrders = async () => {
         try {
-          const res = await fetch(`http://localhost:4000/cancelled-orders/${id}`);
+          const res = await fetch(`${API_URL}/cancelled-orders/${id}`);
           const data = await res.json();
           console.log("API response:", data);
 

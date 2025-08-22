@@ -4,12 +4,13 @@ import '../CSS/Orders.css'
 import { toast, ToastContainer } from "react-toastify";
 const Orders = () => {
     const { id } = useParams();
+    const API_URL = process.env.REACT_APP_API_URL;
     const [orders,setOrders] = useState([]);
     //fetch order by user id from db
     useEffect(()=>{
         const fetchOrders = async()=>{
             try {
-                const res = await fetch(`http://localhost:4000/Order/${id}`);
+                const res = await fetch(`${API_URL}/Order/${id}`);
                 const data = await res.json();
                 console.log("api response",data);
                 if (data.success && Array.isArray(data.orders)) {
@@ -27,7 +28,7 @@ const Orders = () => {
     const token = localStorage.getItem('auth-token');
     if (!token) return;
     try {
-        const response = await fetch(`http://localhost:4000/cancel/${id}`, {
+        const response = await fetch(`${API_URL}/cancel/${id}`, {
         method: "PUT",
         headers: {
             Accept: "application/json",

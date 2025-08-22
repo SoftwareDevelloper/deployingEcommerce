@@ -5,12 +5,14 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const ProductsDetails = () => {
   const [ProductDetails, SetProductDetails] = useState(null);
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const { id } = useParams();
   const [activeImage, setActiveImage] = useState('');
   const [cartItems, setCartItems] = useState([]);
   const [wishlistItems,setWishlistItems] = useState([]);
   useEffect(() => {
-    fetch(`http://localhost:4000/Product/${id}`)
+    fetch(`${API_URL}/Product/${id}`)
       .then((res) => res.json())
       .then((data) => {
         console.log('product fetched', data);
@@ -29,7 +31,7 @@ const ProductsDetails = () => {
     setCartItems((prev)=>({...prev,[itemId]:(prev[itemId] || 0)+1}))
     const token = localStorage.getItem('auth-token');
     if (token) {
-      fetch('http://localhost:4000/Addtocart', {
+      fetch(`${API_URL}/Addtocart`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -50,7 +52,7 @@ const ProductsDetails = () => {
     setCartItems((prev)=>({...prev,[itemId]:(prev[itemId] || 0)+1}))
     const token = localStorage.getItem('auth-token');
     if (token) {
-      fetch('http://localhost:4000/Addtowishlist', {
+      fetch(`${API_URL}/Addtowishlist`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',

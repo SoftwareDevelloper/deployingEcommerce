@@ -12,6 +12,7 @@ const stripePromise = loadStripe('pk_test_51RoCVCGar6ByhFT1cb72cOGB5F1gaafxKqK6M
 
 const Checkout = () => {
 const [items, setItems] = useState([]);
+const API_URL = process.env.REACT_APP_API_URL;
 const [selectedPaymentMethod, setSelectedPaymentMethod] = useState('');
 const [billingDetails, setBillingDetails] = useState({
   firstName: '',
@@ -30,7 +31,7 @@ const elements = useElements();
     const fetchCart = async () => {
       const token = localStorage.getItem('auth-token');
       try {
-        const res = await fetch('http://localhost:4000/getCart', {
+        const res = await fetch(`${API_URL}/getCart`, {
           headers: { Authorization: `Bearer ${token}`, },
         });
         const data = await res.json();
@@ -56,7 +57,7 @@ const elements = useElements();
     if (selectedPaymentMethod === 'bank') 
     {
       try {
-      const paymentIntentRes = await fetch('http://localhost:4000/createPaymentIntent',{
+      const paymentIntentRes = await fetch(`${API_URL}/createPaymentIntent`,{
         method:"POST",
         headers:{
           "Content-Type": "application/json",
@@ -98,7 +99,7 @@ const elements = useElements();
       }
     }
     // Create the order
-    const orderRes = await fetch("http://localhost:4000/createOrder",{
+    const orderRes = await fetch(`${API_URL}/createOrder`,{
       method:"POST",
       headers:{
         "Content-Type":"application/json",

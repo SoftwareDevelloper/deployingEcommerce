@@ -4,6 +4,7 @@ import aside_sign_img from '../../asssets/aside_sign_img.png'
 import google from '../../asssets/google.png'
 import '../CSS/SignUp.css'
 const SignUp = () => {
+  const API_URL = process.env.REACT_APP_API_URL;
   const [formData , setformData] = useState({
     name:"",
     password:"",
@@ -15,7 +16,7 @@ const SignUp = () => {
   const SignUp = async () =>{
     console.log('sign up function executed',formData)
     let responseData;
-    await fetch('http://localhost:4000/register',{
+    await fetch(`${API_URL}/register`,{
       method:"POST",
       headers:{
         Accept: 'application/json',

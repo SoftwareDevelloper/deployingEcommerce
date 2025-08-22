@@ -6,12 +6,13 @@ import { Link } from 'react-router-dom';
 const Collections = () => {
     const [cartItems, setCartItems] = useState([]);
     const [wishlistItems,setWishlistItems] = useState([]);
+    const API_URL = process.env.REACT_APP_API_URL;
     const addTocart = (itemId) => {
         const user = JSON.parse(localStorage.getItem('user'));
         setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 })); 
         const token = localStorage.getItem('auth-token');
         if (token) {
-            fetch('http://localhost:4000/Addtocart', {
+            fetch(`${API_URL}/Addtocart`, {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -36,7 +37,7 @@ const Collections = () => {
         setWishlistItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 })); 
         const token = localStorage.getItem('auth-token');
         if (token) {
-            fetch('http://localhost:4000/Addtowishlist', {
+            fetch(`${API_URL}/Addtowishlist`, {
                 method: 'POST',
                 headers: {
                     Accept: 'application/json',
@@ -58,7 +59,7 @@ const Collections = () => {
     const [allproducts,setAllproducts] = useState([])
     const fethInfo = async () => {
         try {
-            const res =await fetch('http://localhost:4000/allProducts');
+            const res =await fetch(`${API_URL}/allProducts`);
             const data = await res.json();
             setAllproducts(data);
         } catch (error) {

@@ -5,12 +5,12 @@ import '../CSS/cart.css';
 const Cart = () => {
   const [cartItems, setCartItems] = useState([]);
   const navigate = useNavigate();
-
+  const API_URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     const fetchCart = async () => {
       const token = localStorage.getItem('auth-token');
       try {
-        const response = await fetch('http://localhost:4000/getCart', {
+        const response = await fetch(`${API_URL}/getCart`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ const Cart = () => {
     setCartItems((prev) => prev.filter((item) => item.id !== itemId));
     const token = localStorage.getItem('auth-token');
     if (token) {
-      fetch('http://localhost:4000/RemoveFromCart', {
+      fetch(`${API_URL}/RemoveFromCart`, {
         method: 'POST',
         headers: {
           Accept: 'application/json',
@@ -73,7 +73,7 @@ const handleDecrease = async (item) => {
 const updateCartOnBackend = async (itemId, action) => {
   const token = localStorage.getItem('auth-token');
   const endpoint = 
-    action === 'increase' ? 'http://localhost:4000/Addtocart' : 'http://localhost:4000/RemoveFromCart';
+    action === 'increase' ? `${API_URL}/Addtocart` : `${API_URL}/RemoveFromCart`;
 
   try {
     await fetch(endpoint, {

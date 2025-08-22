@@ -5,12 +5,15 @@ import rect_icon from '../../asssets/rect_icon.png'
 import './BSP.css'
 
 const BSP = () => {
+    const API_URL = process.env.REACT_APP_API_URL;
+
+
     const [allproducts,setAllproducts] = useState([])
     const [cartItems, setCartItems] = useState([]);
     const [wishlistItems,setWishlistItems] = useState([]);
           const fetchBestSales = async () => {
               try {
-                  const res =await fetch('http://localhost:4000/bestSellers');
+                  const res =await fetch(`${API_URL}/bestSellers`);
                   const data = await res.json();
                   setAllproducts(data);
               } catch (error) {
@@ -26,7 +29,7 @@ const BSP = () => {
             setWishlistItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 })); 
             const token = localStorage.getItem('auth-token');
             if (token) {
-                fetch('http://localhost:4000/Addtowishlist', {
+                fetch(`${API_URL}/Addtowishlist`, {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',
@@ -50,7 +53,7 @@ const BSP = () => {
             setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 })); 
             const token = localStorage.getItem('auth-token');
             if (token) {
-                fetch('http://localhost:4000/Addtocart', {
+                fetch(`${API_URL}/Addtocart`, {
                     method: 'POST',
                     headers: {
                         Accept: 'application/json',

@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 const Profile = () => {
   const { id } = useParams();
+  const API_URL = process.env.REACT_APP_API_URL;
   console.log("User ObjectId from URL:", id);
   const [User,setUser] =useState({});
   const [formData, setFormData] = useState({
@@ -19,7 +20,7 @@ const Profile = () => {
   }
   //fetch profile info
   useEffect(()=>{
-    fetch(`http://localhost:4000/ClientInfo/${id}`)
+    fetch(`${API_URL}/ClientInfo/${id}`)
       .then((response) => response.json())
       .then((data)=>{
         console.log('User fetched',data);
@@ -42,7 +43,7 @@ const Profile = () => {
     }
     console.log(formData);
     let responseData;
-    await fetch(`http://localhost:4000/updateProfile/${id}`,{
+    await fetch(`${API_URL}/updateProfile/${id}`,{
       method:"PUT",
       headers:{
         Accept:'application/json',
