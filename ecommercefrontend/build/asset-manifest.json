@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1aa7bbc6.css",
+    "main.js": "/static/js/main.cef83e86.js",
+    "static/js/488.2f26054a.chunk.js": "/static/js/488.2f26054a.chunk.js",
+    "static/media/banner.png": "/static/media/banner.2a04c933b1985ae89ee9.png",
+    "static/media/aside_img.png": "/static/media/aside_img.43c8634babd995535b3c.png",
+    "static/media/aside_sign_img.png": "/static/media/aside_sign_img.4caf1970a46cbfad293d.png",
+    "static/media/MenBanner.png": "/static/media/MenBanner.48846d7edb0fe3c0f510.png",
+    "static/media/womenBanner.png": "/static/media/womenBanner.534e75cac472c0e22e23.png",
+    "static/media/phones.png": "/static/media/phones.bf565f80033c4bd8f310.png",
+    "static/media/Tv.png": "/static/media/Tv.7008227ab975c60bb7a4.png",
+    "static/media/ps5.png": "/static/media/ps5.59107f586b96afad66b6.png",
+    "static/media/kidsBanner.png": "/static/media/kidsBanner.a9cfcf64deb88acd36e2.png",
+    "static/media/google.png": "/static/media/google.24ef4c71e18efb3fd041.png",
+    "static/media/logo.png": "/static/media/logo.344f5a5fcef4777147a1.png",
+    "static/media/controlleur.png": "/static/media/controlleur.03d720960d8d0273153b.png",
+    "static/media/TV.png": "/static/media/TV.ff1d8a467ce0c2d35d25.png",
+    "static/media/kid.png": "/static/media/kid.c9deba37ab0f871e149d.png",
+    "static/media/gamerKeyboard.png": "/static/media/gamerKeyboard.41b12863f7a77046cd05.png",
+    "static/media/women.png": "/static/media/women.1c5308a7b2a096bb0d55.png",
+    "static/media/chair.png": "/static/media/chair.4e14bb09cd6168729642.png",
+    "static/media/man.png": "/static/media/man.d549848e5f18891ac2eb.png",
+    "index.html": "/index.html",
+    "main.1aa7bbc6.css.map": "/static/css/main.1aa7bbc6.css.map",
+    "main.cef83e86.js.map": "/static/js/main.cef83e86.js.map",
+    "488.2f26054a.chunk.js.map": "/static/js/488.2f26054a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1aa7bbc6.css",
+    "static/js/main.cef83e86.js"
+  ]
+}
